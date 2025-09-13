@@ -84,10 +84,40 @@ This configuration ensures that the model is trained on sufficient data while ma
 
 ## Performance Metrics
 
+### Overall Performance
 - **Overall Accuracy**: 96%
 - **Improvement over SOTA**: ~10%
 - **Robustness**: Enhanced performance across all leukemia subtypes
 - **Clinical Applicability**: Validated on challenging real-world dataset
+
+### Comparative Analysis Results
+
+Our comprehensive evaluation includes comparison with three baseline models, demonstrating the statistical significance of our approach's superiority.
+
+#### Model Performance Summary
+
+| Model | AUC (Mean ± Std) | Recall (Mean ± Std) | F1-Score (Mean ± Std) |
+|-------|------------------|---------------------|----------------------|
+| **Model A (Our Approach)** | **0.989 ± 0.008** | **96.204 ± 1.203** | **96.334 ± 1.479** |
+| Model B | 0.963 ± 0.008 | 92.518 ± 1.414 | 92.920 ± 0.882 |
+| Model C | 0.887 ± 0.018 | 87.024 ± 1.321 | 86.688 ± 1.156 |
+| Model D | 0.794 ± 0.015 | 79.176 ± 1.493 | 79.110 ± 1.842 |
+
+#### Statistical Significance Analysis
+
+T-test results confirm the statistical significance of our model's superiority across all evaluation metrics:
+
+| Comparison | AUC | Recall | F1-Score | Statistical Significance |
+|------------|-----|---------|----------|-------------------------|
+| **Model A vs Model B** | Δ +0.027 (p=0.000720) | Δ +3.686% (p=0.002172) | Δ +3.414% (p=0.002187) | ✅ **Significant** |
+| **Model A vs Model C** | Δ +0.102 (p=0.000003) | Δ +9.180% (p=0.000003) | Δ +9.646% (p=0.000003) | ✅ **Highly Significant** |
+| **Model A vs Model D** | Δ +0.195 (p<0.000001) | Δ +17.028% (p<0.000001) | Δ +17.224% (p<0.000001) | ✅ **Highly Significant** |
+
+**Key Findings:**
+- Our approach (Model A) demonstrates statistically significant improvements across all metrics (p < 0.05)
+- The largest performance gains are observed against Model D, with improvements exceeding 17% in both Recall and F1-Score
+- Consistent low standard deviations indicate high model stability and reproducibility
+- AUC values approaching 0.99 demonstrate excellent discriminative capability across all leukemia subtypes
 
 ## Clinical Impact
 
@@ -116,3 +146,4 @@ If you use this work in your research, please cite:
 
 ## Contact
 
+mohammadmomenian1@gmail.com
